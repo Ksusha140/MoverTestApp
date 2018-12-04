@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddressDataSelectionCollectionViewCell" id="MNq-gW-FvV" customClass="AddressDataSelectionCollectionViewCell" customModule="MoverTestApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="315" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="315" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMO-2G-NT9" customClass="RoutePointView" customModule="MoverTestApp" customModuleProvider="target">
+                        <rect key="frame" x="16" y="18" width="24" height="24"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="MiU-pJ-lUc"/>
+                            <constraint firstAttribute="width" constant="24" id="hap-ea-FQc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="izQ-VV-4Rx"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Откуда?" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3h-NY-sJ1">
+                        <rect key="frame" x="56" y="15" width="104" height="30"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                        <color key="textColor" red="0.1960784314" green="0.23529411759999999" blue="0.36470588240000001" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="e3h-NY-sJ1" secondAttribute="bottom" constant="8" id="B2C-mt-YOB"/>
+                <constraint firstItem="ZMO-2G-NT9" firstAttribute="leading" secondItem="MNq-gW-FvV" secondAttribute="leading" constant="16" id="JbG-q7-rku"/>
+                <constraint firstItem="ZMO-2G-NT9" firstAttribute="centerY" secondItem="MNq-gW-FvV" secondAttribute="centerY" id="KQ8-PZ-zGc"/>
+                <constraint firstItem="e3h-NY-sJ1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MNq-gW-FvV" secondAttribute="top" constant="8" id="MFj-s8-etE"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="e3h-NY-sJ1" secondAttribute="trailing" constant="16" id="b2x-pw-VVn"/>
+                <constraint firstItem="e3h-NY-sJ1" firstAttribute="centerY" secondItem="MNq-gW-FvV" secondAttribute="centerY" id="mWJ-GT-ix4"/>
+                <constraint firstItem="e3h-NY-sJ1" firstAttribute="leading" secondItem="ZMO-2G-NT9" secondAttribute="trailing" constant="16" id="vcm-M3-1aE"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="z5k-ke-9ow"/>
+            <connections>
+                <outlet property="routePointView" destination="ZMO-2G-NT9" id="qxi-b7-zRn"/>
+                <outlet property="titleLabel" destination="e3h-NY-sJ1" id="Ce3-8u-tS2"/>
+            </connections>
+            <point key="canvasLocation" x="188" y="170.91454272863569"/>
+        </collectionViewCell>
+    </objects>
+</document>
